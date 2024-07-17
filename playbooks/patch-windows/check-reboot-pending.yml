@@ -1,9 +1,5 @@
----
-- name: check free disk space
-  hosts: windows
-  tasks:
-   - name: Examine various registry locations identify a pending reboot
-  win_shell: |
+- name: Examine various registry locations identify a pending reboot
+win_shell: |
 
     $results = @{'needs_reboot'=$false ; 'reason'=@()}
     $regpath = "HKLM:\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending"
