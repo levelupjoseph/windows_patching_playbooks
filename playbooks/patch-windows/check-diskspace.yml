@@ -1,6 +1,6 @@
 ---
 - name: check free disk space
-  hosts: all
+  hosts: localhost
   tasks:
     - name: "Check free space in C:"
       win_shell: "write-host ([math]::Round((Get-PSDrive C | Select-Object Free).free / 1024 / 1024 / 1024,2))"
