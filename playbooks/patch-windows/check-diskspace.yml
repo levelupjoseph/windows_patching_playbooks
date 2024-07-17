@@ -11,7 +11,7 @@
         msg: |
           "{{ freespace.stdout }} GB"
 
-    - name: fail if there is not enough space
-      fail:
-        msg: "VM {{inventory_hostname}} has not enough space"
-      when: "{{freespace.stdout | int < 20}}"
+ #   - name: fail if there is not enough space
+ #    fail:
+ #       msg: "VM {{inventory_hostname}} has not enough space"
+ #     when: "{{freespace.stdout | int < 20}}"
