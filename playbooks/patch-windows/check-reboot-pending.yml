@@ -1,4 +1,8 @@
-- name: Examine various registry locations identify a pending reboot
+---
+- name: check free disk space
+  hosts: windows
+  tasks:
+   - name: Examine various registry locations identify a pending reboot
   win_shell: |
 
     $results = @{'needs_reboot'=$false ; 'reason'=@()}
