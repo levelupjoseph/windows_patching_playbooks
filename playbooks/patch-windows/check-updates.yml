@@ -3,7 +3,6 @@
   tasks:
     - name: Check for missing updates
       win_updates:
-        validate_certs: no
         state: searched
       register: update_results
 
